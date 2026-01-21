@@ -1,7 +1,7 @@
 part of 'home_bloc.dart';
 
 @freezed
-class HomeState with _$HomeState {
+sealed class HomeState with _$HomeState {
   const factory HomeState({
     required bool isNFCReading,
     required bool canShowTagEmptyMessage,

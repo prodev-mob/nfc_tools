@@ -25,6 +25,12 @@ class MyApp extends StatelessWidget {
         minTextAdapt: true,
         splitScreenMode: true,
         useInheritedMediaQuery: true,
+        fontSizeResolver: (fontSize, instance) {
+          final display = View.of(context).display;
+          final screenSize = display.size / display.devicePixelRatio;
+          final scaleWidth = screenSize.width / const Size(375, 812).width;
+          return fontSize * scaleWidth;
+        },
         builder: (_, child) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,

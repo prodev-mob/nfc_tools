@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,808 +9,665 @@ part of 'write_tag_bloc.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
 /// @nodoc
 mixin _$WriteTagEvent {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initialState,
-    required TResult Function(String value) changeDataValue,
-    required TResult Function(String type) changeDataType,
-    required TResult Function(WriteDataStatus writeDataStatus)
-        changeWriteDataStatus,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialState,
-    TResult? Function(String value)? changeDataValue,
-    TResult? Function(String type)? changeDataType,
-    TResult? Function(WriteDataStatus writeDataStatus)? changeWriteDataStatus,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialState,
-    TResult Function(String value)? changeDataValue,
-    TResult Function(String type)? changeDataType,
-    TResult Function(WriteDataStatus writeDataStatus)? changeWriteDataStatus,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_InitialState value) initialState,
-    required TResult Function(_ChangeDataValue value) changeDataValue,
-    required TResult Function(_ChangeDataType value) changeDataType,
-    required TResult Function(_ChangeWriteDataStatus value)
-        changeWriteDataStatus,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_InitialState value)? initialState,
-    TResult? Function(_ChangeDataValue value)? changeDataValue,
-    TResult? Function(_ChangeDataType value)? changeDataType,
-    TResult? Function(_ChangeWriteDataStatus value)? changeWriteDataStatus,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_InitialState value)? initialState,
-    TResult Function(_ChangeDataValue value)? changeDataValue,
-    TResult Function(_ChangeDataType value)? changeDataType,
-    TResult Function(_ChangeWriteDataStatus value)? changeWriteDataStatus,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+
+
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is WriteTagEvent);
+}
+
+
+@override
+int get hashCode => runtimeType.hashCode;
+
+@override
+String toString() {
+  return 'WriteTagEvent()';
+}
+
+
 }
 
 /// @nodoc
-abstract class $WriteTagEventCopyWith<$Res> {
-  factory $WriteTagEventCopyWith(
-          WriteTagEvent value, $Res Function(WriteTagEvent) then) =
-      _$WriteTagEventCopyWithImpl<$Res, WriteTagEvent>;
+class $WriteTagEventCopyWith<$Res>  {
+$WriteTagEventCopyWith(WriteTagEvent _, $Res Function(WriteTagEvent) __);
 }
 
-/// @nodoc
-class _$WriteTagEventCopyWithImpl<$Res, $Val extends WriteTagEvent>
-    implements $WriteTagEventCopyWith<$Res> {
-  _$WriteTagEventCopyWithImpl(this._value, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+/// Adds pattern-matching-related methods to [WriteTagEvent].
+extension WriteTagEventPatterns on WriteTagEvent {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( _InitialState value)?  initialState,TResult Function( _ChangeDataValue value)?  changeDataValue,TResult Function( _ChangeDataType value)?  changeDataType,TResult Function( _ChangeWriteDataStatus value)?  changeWriteDataStatus,required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _InitialState() when initialState != null:
+return initialState(_that);case _ChangeDataValue() when changeDataValue != null:
+return changeDataValue(_that);case _ChangeDataType() when changeDataType != null:
+return changeDataType(_that);case _ChangeWriteDataStatus() when changeWriteDataStatus != null:
+return changeWriteDataStatus(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( _InitialState value)  initialState,required TResult Function( _ChangeDataValue value)  changeDataValue,required TResult Function( _ChangeDataType value)  changeDataType,required TResult Function( _ChangeWriteDataStatus value)  changeWriteDataStatus,}){
+final _that = this;
+switch (_that) {
+case _InitialState():
+return initialState(_that);case _ChangeDataValue():
+return changeDataValue(_that);case _ChangeDataType():
+return changeDataType(_that);case _ChangeWriteDataStatus():
+return changeWriteDataStatus(_that);}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( _InitialState value)?  initialState,TResult? Function( _ChangeDataValue value)?  changeDataValue,TResult? Function( _ChangeDataType value)?  changeDataType,TResult? Function( _ChangeWriteDataStatus value)?  changeWriteDataStatus,}){
+final _that = this;
+switch (_that) {
+case _InitialState() when initialState != null:
+return initialState(_that);case _ChangeDataValue() when changeDataValue != null:
+return changeDataValue(_that);case _ChangeDataType() when changeDataType != null:
+return changeDataType(_that);case _ChangeWriteDataStatus() when changeWriteDataStatus != null:
+return changeWriteDataStatus(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function()?  initialState,TResult Function( String value)?  changeDataValue,TResult Function( String type)?  changeDataType,TResult Function( WriteDataStatus writeDataStatus)?  changeWriteDataStatus,required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _InitialState() when initialState != null:
+return initialState();case _ChangeDataValue() when changeDataValue != null:
+return changeDataValue(_that.value);case _ChangeDataType() when changeDataType != null:
+return changeDataType(_that.type);case _ChangeWriteDataStatus() when changeWriteDataStatus != null:
+return changeWriteDataStatus(_that.writeDataStatus);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function()  initialState,required TResult Function( String value)  changeDataValue,required TResult Function( String type)  changeDataType,required TResult Function( WriteDataStatus writeDataStatus)  changeWriteDataStatus,}) {final _that = this;
+switch (_that) {
+case _InitialState():
+return initialState();case _ChangeDataValue():
+return changeDataValue(_that.value);case _ChangeDataType():
+return changeDataType(_that.type);case _ChangeWriteDataStatus():
+return changeWriteDataStatus(_that.writeDataStatus);}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function()?  initialState,TResult? Function( String value)?  changeDataValue,TResult? Function( String type)?  changeDataType,TResult? Function( WriteDataStatus writeDataStatus)?  changeWriteDataStatus,}) {final _that = this;
+switch (_that) {
+case _InitialState() when initialState != null:
+return initialState();case _ChangeDataValue() when changeDataValue != null:
+return changeDataValue(_that.value);case _ChangeDataType() when changeDataType != null:
+return changeDataType(_that.type);case _ChangeWriteDataStatus() when changeWriteDataStatus != null:
+return changeWriteDataStatus(_that.writeDataStatus);case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-abstract class _$$InitialStateImplCopyWith<$Res> {
-  factory _$$InitialStateImplCopyWith(
-          _$InitialStateImpl value, $Res Function(_$InitialStateImpl) then) =
-      __$$InitialStateImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$InitialStateImplCopyWithImpl<$Res>
-    extends _$WriteTagEventCopyWithImpl<$Res, _$InitialStateImpl>
-    implements _$$InitialStateImplCopyWith<$Res> {
-  __$$InitialStateImplCopyWithImpl(
-      _$InitialStateImpl _value, $Res Function(_$InitialStateImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$InitialStateImpl implements _InitialState {
-  const _$InitialStateImpl();
-
-  @override
-  String toString() {
-    return 'WriteTagEvent.initialState()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$InitialStateImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initialState,
-    required TResult Function(String value) changeDataValue,
-    required TResult Function(String type) changeDataType,
-    required TResult Function(WriteDataStatus writeDataStatus)
-        changeWriteDataStatus,
-  }) {
-    return initialState();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialState,
-    TResult? Function(String value)? changeDataValue,
-    TResult? Function(String type)? changeDataType,
-    TResult? Function(WriteDataStatus writeDataStatus)? changeWriteDataStatus,
-  }) {
-    return initialState?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialState,
-    TResult Function(String value)? changeDataValue,
-    TResult Function(String type)? changeDataType,
-    TResult Function(WriteDataStatus writeDataStatus)? changeWriteDataStatus,
-    required TResult orElse(),
-  }) {
-    if (initialState != null) {
-      return initialState();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_InitialState value) initialState,
-    required TResult Function(_ChangeDataValue value) changeDataValue,
-    required TResult Function(_ChangeDataType value) changeDataType,
-    required TResult Function(_ChangeWriteDataStatus value)
-        changeWriteDataStatus,
-  }) {
-    return initialState(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_InitialState value)? initialState,
-    TResult? Function(_ChangeDataValue value)? changeDataValue,
-    TResult? Function(_ChangeDataType value)? changeDataType,
-    TResult? Function(_ChangeWriteDataStatus value)? changeWriteDataStatus,
-  }) {
-    return initialState?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_InitialState value)? initialState,
-    TResult Function(_ChangeDataValue value)? changeDataValue,
-    TResult Function(_ChangeDataType value)? changeDataType,
-    TResult Function(_ChangeWriteDataStatus value)? changeWriteDataStatus,
-    required TResult orElse(),
-  }) {
-    if (initialState != null) {
-      return initialState(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _InitialState implements WriteTagEvent {
-  const factory _InitialState() = _$InitialStateImpl;
-}
-
-/// @nodoc
-abstract class _$$ChangeDataValueImplCopyWith<$Res> {
-  factory _$$ChangeDataValueImplCopyWith(_$ChangeDataValueImpl value,
-          $Res Function(_$ChangeDataValueImpl) then) =
-      __$$ChangeDataValueImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String value});
-}
-
-/// @nodoc
-class __$$ChangeDataValueImplCopyWithImpl<$Res>
-    extends _$WriteTagEventCopyWithImpl<$Res, _$ChangeDataValueImpl>
-    implements _$$ChangeDataValueImplCopyWith<$Res> {
-  __$$ChangeDataValueImplCopyWithImpl(
-      _$ChangeDataValueImpl _value, $Res Function(_$ChangeDataValueImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? value = null,
-  }) {
-    return _then(_$ChangeDataValueImpl(
-      value: null == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
 }
 
 /// @nodoc
 
-class _$ChangeDataValueImpl implements _ChangeDataValue {
-  const _$ChangeDataValueImpl({required this.value});
 
-  @override
-  final String value;
+class _InitialState implements WriteTagEvent {
+  const _InitialState();
+  
 
-  @override
-  String toString() {
-    return 'WriteTagEvent.changeDataValue(value: $value)';
-  }
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ChangeDataValueImpl &&
-            (identical(other.value, value) || other.value == value));
-  }
 
-  @override
-  int get hashCode => Object.hash(runtimeType, value);
 
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ChangeDataValueImplCopyWith<_$ChangeDataValueImpl> get copyWith =>
-      __$$ChangeDataValueImplCopyWithImpl<_$ChangeDataValueImpl>(
-          this, _$identity);
 
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initialState,
-    required TResult Function(String value) changeDataValue,
-    required TResult Function(String type) changeDataType,
-    required TResult Function(WriteDataStatus writeDataStatus)
-        changeWriteDataStatus,
-  }) {
-    return changeDataValue(value);
-  }
 
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialState,
-    TResult? Function(String value)? changeDataValue,
-    TResult? Function(String type)? changeDataType,
-    TResult? Function(WriteDataStatus writeDataStatus)? changeWriteDataStatus,
-  }) {
-    return changeDataValue?.call(value);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialState,
-    TResult Function(String value)? changeDataValue,
-    TResult Function(String type)? changeDataType,
-    TResult Function(WriteDataStatus writeDataStatus)? changeWriteDataStatus,
-    required TResult orElse(),
-  }) {
-    if (changeDataValue != null) {
-      return changeDataValue(value);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_InitialState value) initialState,
-    required TResult Function(_ChangeDataValue value) changeDataValue,
-    required TResult Function(_ChangeDataType value) changeDataType,
-    required TResult Function(_ChangeWriteDataStatus value)
-        changeWriteDataStatus,
-  }) {
-    return changeDataValue(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_InitialState value)? initialState,
-    TResult? Function(_ChangeDataValue value)? changeDataValue,
-    TResult? Function(_ChangeDataType value)? changeDataType,
-    TResult? Function(_ChangeWriteDataStatus value)? changeWriteDataStatus,
-  }) {
-    return changeDataValue?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_InitialState value)? initialState,
-    TResult Function(_ChangeDataValue value)? changeDataValue,
-    TResult Function(_ChangeDataType value)? changeDataType,
-    TResult Function(_ChangeWriteDataStatus value)? changeWriteDataStatus,
-    required TResult orElse(),
-  }) {
-    if (changeDataValue != null) {
-      return changeDataValue(this);
-    }
-    return orElse();
-  }
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _InitialState);
 }
 
-abstract class _ChangeDataValue implements WriteTagEvent {
-  const factory _ChangeDataValue({required final String value}) =
-      _$ChangeDataValueImpl;
 
-  String get value;
-  @JsonKey(ignore: true)
-  _$$ChangeDataValueImplCopyWith<_$ChangeDataValueImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+int get hashCode => runtimeType.hashCode;
+
+@override
+String toString() {
+  return 'WriteTagEvent.initialState()';
+}
+
+
+}
+
+
+
+
+/// @nodoc
+
+
+class _ChangeDataValue implements WriteTagEvent {
+  const _ChangeDataValue({required this.value});
+  
+
+ final  String value;
+
+/// Create a copy of WriteTagEvent
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$ChangeDataValueCopyWith<_ChangeDataValue> get copyWith => __$ChangeDataValueCopyWithImpl<_ChangeDataValue>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChangeDataValue&&(identical(other.value, value) || other.value == value));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,value);
+
+@override
+String toString() {
+  return 'WriteTagEvent.changeDataValue(value: $value)';
+}
+
+
 }
 
 /// @nodoc
-abstract class _$$ChangeDataTypeImplCopyWith<$Res> {
-  factory _$$ChangeDataTypeImplCopyWith(_$ChangeDataTypeImpl value,
-          $Res Function(_$ChangeDataTypeImpl) then) =
-      __$$ChangeDataTypeImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String type});
+abstract mixin class _$ChangeDataValueCopyWith<$Res> implements $WriteTagEventCopyWith<$Res> {
+  factory _$ChangeDataValueCopyWith(_ChangeDataValue value, $Res Function(_ChangeDataValue) _then) = __$ChangeDataValueCopyWithImpl;
+@useResult
+$Res call({
+ String value
+});
+
+
+
+
+}
+/// @nodoc
+class __$ChangeDataValueCopyWithImpl<$Res>
+    implements _$ChangeDataValueCopyWith<$Res> {
+  __$ChangeDataValueCopyWithImpl(this._self, this._then);
+
+  final _ChangeDataValue _self;
+  final $Res Function(_ChangeDataValue) _then;
+
+/// Create a copy of WriteTagEvent
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? value = null,}) {
+  return _then(_ChangeDataValue(
+value: null == value ? _self.value : value // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-class __$$ChangeDataTypeImplCopyWithImpl<$Res>
-    extends _$WriteTagEventCopyWithImpl<$Res, _$ChangeDataTypeImpl>
-    implements _$$ChangeDataTypeImplCopyWith<$Res> {
-  __$$ChangeDataTypeImplCopyWithImpl(
-      _$ChangeDataTypeImpl _value, $Res Function(_$ChangeDataTypeImpl) _then)
-      : super(_value, _then);
 
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? type = null,
-  }) {
-    return _then(_$ChangeDataTypeImpl(
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
 }
 
 /// @nodoc
 
-class _$ChangeDataTypeImpl implements _ChangeDataType {
-  const _$ChangeDataTypeImpl({required this.type});
 
-  @override
-  final String type;
+class _ChangeDataType implements WriteTagEvent {
+  const _ChangeDataType({required this.type});
+  
 
-  @override
-  String toString() {
-    return 'WriteTagEvent.changeDataType(type: $type)';
-  }
+ final  String type;
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ChangeDataTypeImpl &&
-            (identical(other.type, type) || other.type == type));
-  }
+/// Create a copy of WriteTagEvent
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$ChangeDataTypeCopyWith<_ChangeDataType> get copyWith => __$ChangeDataTypeCopyWithImpl<_ChangeDataType>(this, _$identity);
 
-  @override
-  int get hashCode => Object.hash(runtimeType, type);
 
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ChangeDataTypeImplCopyWith<_$ChangeDataTypeImpl> get copyWith =>
-      __$$ChangeDataTypeImplCopyWithImpl<_$ChangeDataTypeImpl>(
-          this, _$identity);
 
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initialState,
-    required TResult Function(String value) changeDataValue,
-    required TResult Function(String type) changeDataType,
-    required TResult Function(WriteDataStatus writeDataStatus)
-        changeWriteDataStatus,
-  }) {
-    return changeDataType(type);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialState,
-    TResult? Function(String value)? changeDataValue,
-    TResult? Function(String type)? changeDataType,
-    TResult? Function(WriteDataStatus writeDataStatus)? changeWriteDataStatus,
-  }) {
-    return changeDataType?.call(type);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialState,
-    TResult Function(String value)? changeDataValue,
-    TResult Function(String type)? changeDataType,
-    TResult Function(WriteDataStatus writeDataStatus)? changeWriteDataStatus,
-    required TResult orElse(),
-  }) {
-    if (changeDataType != null) {
-      return changeDataType(type);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_InitialState value) initialState,
-    required TResult Function(_ChangeDataValue value) changeDataValue,
-    required TResult Function(_ChangeDataType value) changeDataType,
-    required TResult Function(_ChangeWriteDataStatus value)
-        changeWriteDataStatus,
-  }) {
-    return changeDataType(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_InitialState value)? initialState,
-    TResult? Function(_ChangeDataValue value)? changeDataValue,
-    TResult? Function(_ChangeDataType value)? changeDataType,
-    TResult? Function(_ChangeWriteDataStatus value)? changeWriteDataStatus,
-  }) {
-    return changeDataType?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_InitialState value)? initialState,
-    TResult Function(_ChangeDataValue value)? changeDataValue,
-    TResult Function(_ChangeDataType value)? changeDataType,
-    TResult Function(_ChangeWriteDataStatus value)? changeWriteDataStatus,
-    required TResult orElse(),
-  }) {
-    if (changeDataType != null) {
-      return changeDataType(this);
-    }
-    return orElse();
-  }
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChangeDataType&&(identical(other.type, type) || other.type == type));
 }
 
-abstract class _ChangeDataType implements WriteTagEvent {
-  const factory _ChangeDataType({required final String type}) =
-      _$ChangeDataTypeImpl;
 
-  String get type;
-  @JsonKey(ignore: true)
-  _$$ChangeDataTypeImplCopyWith<_$ChangeDataTypeImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+int get hashCode => Object.hash(runtimeType,type);
+
+@override
+String toString() {
+  return 'WriteTagEvent.changeDataType(type: $type)';
+}
+
+
 }
 
 /// @nodoc
-abstract class _$$ChangeWriteDataStatusImplCopyWith<$Res> {
-  factory _$$ChangeWriteDataStatusImplCopyWith(
-          _$ChangeWriteDataStatusImpl value,
-          $Res Function(_$ChangeWriteDataStatusImpl) then) =
-      __$$ChangeWriteDataStatusImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({WriteDataStatus writeDataStatus});
+abstract mixin class _$ChangeDataTypeCopyWith<$Res> implements $WriteTagEventCopyWith<$Res> {
+  factory _$ChangeDataTypeCopyWith(_ChangeDataType value, $Res Function(_ChangeDataType) _then) = __$ChangeDataTypeCopyWithImpl;
+@useResult
+$Res call({
+ String type
+});
+
+
+
+
+}
+/// @nodoc
+class __$ChangeDataTypeCopyWithImpl<$Res>
+    implements _$ChangeDataTypeCopyWith<$Res> {
+  __$ChangeDataTypeCopyWithImpl(this._self, this._then);
+
+  final _ChangeDataType _self;
+  final $Res Function(_ChangeDataType) _then;
+
+/// Create a copy of WriteTagEvent
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? type = null,}) {
+  return _then(_ChangeDataType(
+type: null == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-class __$$ChangeWriteDataStatusImplCopyWithImpl<$Res>
-    extends _$WriteTagEventCopyWithImpl<$Res, _$ChangeWriteDataStatusImpl>
-    implements _$$ChangeWriteDataStatusImplCopyWith<$Res> {
-  __$$ChangeWriteDataStatusImplCopyWithImpl(_$ChangeWriteDataStatusImpl _value,
-      $Res Function(_$ChangeWriteDataStatusImpl) _then)
-      : super(_value, _then);
 
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? writeDataStatus = null,
-  }) {
-    return _then(_$ChangeWriteDataStatusImpl(
-      writeDataStatus: null == writeDataStatus
-          ? _value.writeDataStatus
-          : writeDataStatus // ignore: cast_nullable_to_non_nullable
-              as WriteDataStatus,
-    ));
-  }
 }
 
 /// @nodoc
 
-class _$ChangeWriteDataStatusImpl implements _ChangeWriteDataStatus {
-  const _$ChangeWriteDataStatusImpl({required this.writeDataStatus});
 
-  @override
-  final WriteDataStatus writeDataStatus;
+class _ChangeWriteDataStatus implements WriteTagEvent {
+  const _ChangeWriteDataStatus({required this.writeDataStatus});
+  
 
-  @override
-  String toString() {
-    return 'WriteTagEvent.changeWriteDataStatus(writeDataStatus: $writeDataStatus)';
-  }
+ final  WriteDataStatus writeDataStatus;
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ChangeWriteDataStatusImpl &&
-            (identical(other.writeDataStatus, writeDataStatus) ||
-                other.writeDataStatus == writeDataStatus));
-  }
+/// Create a copy of WriteTagEvent
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$ChangeWriteDataStatusCopyWith<_ChangeWriteDataStatus> get copyWith => __$ChangeWriteDataStatusCopyWithImpl<_ChangeWriteDataStatus>(this, _$identity);
 
-  @override
-  int get hashCode => Object.hash(runtimeType, writeDataStatus);
 
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ChangeWriteDataStatusImplCopyWith<_$ChangeWriteDataStatusImpl>
-      get copyWith => __$$ChangeWriteDataStatusImplCopyWithImpl<
-          _$ChangeWriteDataStatusImpl>(this, _$identity);
 
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initialState,
-    required TResult Function(String value) changeDataValue,
-    required TResult Function(String type) changeDataType,
-    required TResult Function(WriteDataStatus writeDataStatus)
-        changeWriteDataStatus,
-  }) {
-    return changeWriteDataStatus(writeDataStatus);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initialState,
-    TResult? Function(String value)? changeDataValue,
-    TResult? Function(String type)? changeDataType,
-    TResult? Function(WriteDataStatus writeDataStatus)? changeWriteDataStatus,
-  }) {
-    return changeWriteDataStatus?.call(writeDataStatus);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initialState,
-    TResult Function(String value)? changeDataValue,
-    TResult Function(String type)? changeDataType,
-    TResult Function(WriteDataStatus writeDataStatus)? changeWriteDataStatus,
-    required TResult orElse(),
-  }) {
-    if (changeWriteDataStatus != null) {
-      return changeWriteDataStatus(writeDataStatus);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_InitialState value) initialState,
-    required TResult Function(_ChangeDataValue value) changeDataValue,
-    required TResult Function(_ChangeDataType value) changeDataType,
-    required TResult Function(_ChangeWriteDataStatus value)
-        changeWriteDataStatus,
-  }) {
-    return changeWriteDataStatus(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_InitialState value)? initialState,
-    TResult? Function(_ChangeDataValue value)? changeDataValue,
-    TResult? Function(_ChangeDataType value)? changeDataType,
-    TResult? Function(_ChangeWriteDataStatus value)? changeWriteDataStatus,
-  }) {
-    return changeWriteDataStatus?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_InitialState value)? initialState,
-    TResult Function(_ChangeDataValue value)? changeDataValue,
-    TResult Function(_ChangeDataType value)? changeDataType,
-    TResult Function(_ChangeWriteDataStatus value)? changeWriteDataStatus,
-    required TResult orElse(),
-  }) {
-    if (changeWriteDataStatus != null) {
-      return changeWriteDataStatus(this);
-    }
-    return orElse();
-  }
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChangeWriteDataStatus&&(identical(other.writeDataStatus, writeDataStatus) || other.writeDataStatus == writeDataStatus));
 }
 
-abstract class _ChangeWriteDataStatus implements WriteTagEvent {
-  const factory _ChangeWriteDataStatus(
-          {required final WriteDataStatus writeDataStatus}) =
-      _$ChangeWriteDataStatusImpl;
 
-  WriteDataStatus get writeDataStatus;
-  @JsonKey(ignore: true)
-  _$$ChangeWriteDataStatusImplCopyWith<_$ChangeWriteDataStatusImpl>
-      get copyWith => throw _privateConstructorUsedError;
+@override
+int get hashCode => Object.hash(runtimeType,writeDataStatus);
+
+@override
+String toString() {
+  return 'WriteTagEvent.changeWriteDataStatus(writeDataStatus: $writeDataStatus)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$ChangeWriteDataStatusCopyWith<$Res> implements $WriteTagEventCopyWith<$Res> {
+  factory _$ChangeWriteDataStatusCopyWith(_ChangeWriteDataStatus value, $Res Function(_ChangeWriteDataStatus) _then) = __$ChangeWriteDataStatusCopyWithImpl;
+@useResult
+$Res call({
+ WriteDataStatus writeDataStatus
+});
+
+
+
+
+}
+/// @nodoc
+class __$ChangeWriteDataStatusCopyWithImpl<$Res>
+    implements _$ChangeWriteDataStatusCopyWith<$Res> {
+  __$ChangeWriteDataStatusCopyWithImpl(this._self, this._then);
+
+  final _ChangeWriteDataStatus _self;
+  final $Res Function(_ChangeWriteDataStatus) _then;
+
+/// Create a copy of WriteTagEvent
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? writeDataStatus = null,}) {
+  return _then(_ChangeWriteDataStatus(
+writeDataStatus: null == writeDataStatus ? _self.writeDataStatus : writeDataStatus // ignore: cast_nullable_to_non_nullable
+as WriteDataStatus,
+  ));
+}
+
+
 }
 
 /// @nodoc
 mixin _$WriteTagState {
-  String get dataValue => throw _privateConstructorUsedError;
-  String get dataType => throw _privateConstructorUsedError;
-  WriteDataStatus get writeDataStatus => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
-  $WriteTagStateCopyWith<WriteTagState> get copyWith =>
-      throw _privateConstructorUsedError;
+ String get dataValue; String get dataType; WriteDataStatus get writeDataStatus;
+/// Create a copy of WriteTagState
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$WriteTagStateCopyWith<WriteTagState> get copyWith => _$WriteTagStateCopyWithImpl<WriteTagState>(this as WriteTagState, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is WriteTagState&&(identical(other.dataValue, dataValue) || other.dataValue == dataValue)&&(identical(other.dataType, dataType) || other.dataType == dataType)&&(identical(other.writeDataStatus, writeDataStatus) || other.writeDataStatus == writeDataStatus));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,dataValue,dataType,writeDataStatus);
+
+@override
+String toString() {
+  return 'WriteTagState(dataValue: $dataValue, dataType: $dataType, writeDataStatus: $writeDataStatus)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $WriteTagStateCopyWith<$Res> {
-  factory $WriteTagStateCopyWith(
-          WriteTagState value, $Res Function(WriteTagState) then) =
-      _$WriteTagStateCopyWithImpl<$Res, WriteTagState>;
-  @useResult
-  $Res call(
-      {String dataValue, String dataType, WriteDataStatus writeDataStatus});
-}
+abstract mixin class $WriteTagStateCopyWith<$Res>  {
+  factory $WriteTagStateCopyWith(WriteTagState value, $Res Function(WriteTagState) _then) = _$WriteTagStateCopyWithImpl;
+@useResult
+$Res call({
+ String dataValue, String dataType, WriteDataStatus writeDataStatus
+});
 
+
+
+
+}
 /// @nodoc
-class _$WriteTagStateCopyWithImpl<$Res, $Val extends WriteTagState>
+class _$WriteTagStateCopyWithImpl<$Res>
     implements $WriteTagStateCopyWith<$Res> {
-  _$WriteTagStateCopyWithImpl(this._value, this._then);
+  _$WriteTagStateCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final WriteTagState _self;
+  final $Res Function(WriteTagState) _then;
 
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? dataValue = null,
-    Object? dataType = null,
-    Object? writeDataStatus = null,
-  }) {
-    return _then(_value.copyWith(
-      dataValue: null == dataValue
-          ? _value.dataValue
-          : dataValue // ignore: cast_nullable_to_non_nullable
-              as String,
-      dataType: null == dataType
-          ? _value.dataType
-          : dataType // ignore: cast_nullable_to_non_nullable
-              as String,
-      writeDataStatus: null == writeDataStatus
-          ? _value.writeDataStatus
-          : writeDataStatus // ignore: cast_nullable_to_non_nullable
-              as WriteDataStatus,
-    ) as $Val);
-  }
+/// Create a copy of WriteTagState
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? dataValue = null,Object? dataType = null,Object? writeDataStatus = null,}) {
+  return _then(_self.copyWith(
+dataValue: null == dataValue ? _self.dataValue : dataValue // ignore: cast_nullable_to_non_nullable
+as String,dataType: null == dataType ? _self.dataType : dataType // ignore: cast_nullable_to_non_nullable
+as String,writeDataStatus: null == writeDataStatus ? _self.writeDataStatus : writeDataStatus // ignore: cast_nullable_to_non_nullable
+as WriteDataStatus,
+  ));
+}
+
+}
+
+
+/// Adds pattern-matching-related methods to [WriteTagState].
+extension WriteTagStatePatterns on WriteTagState {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _WriteTagState value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _WriteTagState() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _WriteTagState value)  $default,){
+final _that = this;
+switch (_that) {
+case _WriteTagState():
+return $default(_that);}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _WriteTagState value)?  $default,){
+final _that = this;
+switch (_that) {
+case _WriteTagState() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String dataValue,  String dataType,  WriteDataStatus writeDataStatus)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _WriteTagState() when $default != null:
+return $default(_that.dataValue,_that.dataType,_that.writeDataStatus);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String dataValue,  String dataType,  WriteDataStatus writeDataStatus)  $default,) {final _that = this;
+switch (_that) {
+case _WriteTagState():
+return $default(_that.dataValue,_that.dataType,_that.writeDataStatus);}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String dataValue,  String dataType,  WriteDataStatus writeDataStatus)?  $default,) {final _that = this;
+switch (_that) {
+case _WriteTagState() when $default != null:
+return $default(_that.dataValue,_that.dataType,_that.writeDataStatus);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
-abstract class _$$WriteTagStateImplCopyWith<$Res>
-    implements $WriteTagStateCopyWith<$Res> {
-  factory _$$WriteTagStateImplCopyWith(
-          _$WriteTagStateImpl value, $Res Function(_$WriteTagStateImpl) then) =
-      __$$WriteTagStateImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String dataValue, String dataType, WriteDataStatus writeDataStatus});
+
+
+class _WriteTagState implements WriteTagState {
+  const _WriteTagState({required this.dataValue, required this.dataType, required this.writeDataStatus});
+  
+
+@override final  String dataValue;
+@override final  String dataType;
+@override final  WriteDataStatus writeDataStatus;
+
+/// Create a copy of WriteTagState
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$WriteTagStateCopyWith<_WriteTagState> get copyWith => __$WriteTagStateCopyWithImpl<_WriteTagState>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _WriteTagState&&(identical(other.dataValue, dataValue) || other.dataValue == dataValue)&&(identical(other.dataType, dataType) || other.dataType == dataType)&&(identical(other.writeDataStatus, writeDataStatus) || other.writeDataStatus == writeDataStatus));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,dataValue,dataType,writeDataStatus);
+
+@override
+String toString() {
+  return 'WriteTagState(dataValue: $dataValue, dataType: $dataType, writeDataStatus: $writeDataStatus)';
+}
+
+
 }
 
 /// @nodoc
-class __$$WriteTagStateImplCopyWithImpl<$Res>
-    extends _$WriteTagStateCopyWithImpl<$Res, _$WriteTagStateImpl>
-    implements _$$WriteTagStateImplCopyWith<$Res> {
-  __$$WriteTagStateImplCopyWithImpl(
-      _$WriteTagStateImpl _value, $Res Function(_$WriteTagStateImpl) _then)
-      : super(_value, _then);
+abstract mixin class _$WriteTagStateCopyWith<$Res> implements $WriteTagStateCopyWith<$Res> {
+  factory _$WriteTagStateCopyWith(_WriteTagState value, $Res Function(_WriteTagState) _then) = __$WriteTagStateCopyWithImpl;
+@override @useResult
+$Res call({
+ String dataValue, String dataType, WriteDataStatus writeDataStatus
+});
 
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? dataValue = null,
-    Object? dataType = null,
-    Object? writeDataStatus = null,
-  }) {
-    return _then(_$WriteTagStateImpl(
-      dataValue: null == dataValue
-          ? _value.dataValue
-          : dataValue // ignore: cast_nullable_to_non_nullable
-              as String,
-      dataType: null == dataType
-          ? _value.dataType
-          : dataType // ignore: cast_nullable_to_non_nullable
-              as String,
-      writeDataStatus: null == writeDataStatus
-          ? _value.writeDataStatus
-          : writeDataStatus // ignore: cast_nullable_to_non_nullable
-              as WriteDataStatus,
-    ));
-  }
+
+
+
 }
-
 /// @nodoc
+class __$WriteTagStateCopyWithImpl<$Res>
+    implements _$WriteTagStateCopyWith<$Res> {
+  __$WriteTagStateCopyWithImpl(this._self, this._then);
 
-class _$WriteTagStateImpl implements _WriteTagState {
-  const _$WriteTagStateImpl(
-      {required this.dataValue,
-      required this.dataType,
-      required this.writeDataStatus});
+  final _WriteTagState _self;
+  final $Res Function(_WriteTagState) _then;
 
-  @override
-  final String dataValue;
-  @override
-  final String dataType;
-  @override
-  final WriteDataStatus writeDataStatus;
-
-  @override
-  String toString() {
-    return 'WriteTagState(dataValue: $dataValue, dataType: $dataType, writeDataStatus: $writeDataStatus)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$WriteTagStateImpl &&
-            (identical(other.dataValue, dataValue) ||
-                other.dataValue == dataValue) &&
-            (identical(other.dataType, dataType) ||
-                other.dataType == dataType) &&
-            (identical(other.writeDataStatus, writeDataStatus) ||
-                other.writeDataStatus == writeDataStatus));
-  }
-
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, dataValue, dataType, writeDataStatus);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$WriteTagStateImplCopyWith<_$WriteTagStateImpl> get copyWith =>
-      __$$WriteTagStateImplCopyWithImpl<_$WriteTagStateImpl>(this, _$identity);
+/// Create a copy of WriteTagState
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? dataValue = null,Object? dataType = null,Object? writeDataStatus = null,}) {
+  return _then(_WriteTagState(
+dataValue: null == dataValue ? _self.dataValue : dataValue // ignore: cast_nullable_to_non_nullable
+as String,dataType: null == dataType ? _self.dataType : dataType // ignore: cast_nullable_to_non_nullable
+as String,writeDataStatus: null == writeDataStatus ? _self.writeDataStatus : writeDataStatus // ignore: cast_nullable_to_non_nullable
+as WriteDataStatus,
+  ));
 }
 
-abstract class _WriteTagState implements WriteTagState {
-  const factory _WriteTagState(
-      {required final String dataValue,
-      required final String dataType,
-      required final WriteDataStatus writeDataStatus}) = _$WriteTagStateImpl;
 
-  @override
-  String get dataValue;
-  @override
-  String get dataType;
-  @override
-  WriteDataStatus get writeDataStatus;
-  @override
-  @JsonKey(ignore: true)
-  _$$WriteTagStateImplCopyWith<_$WriteTagStateImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
+
+// dart format on

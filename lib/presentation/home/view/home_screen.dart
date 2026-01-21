@@ -13,7 +13,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:lottie/lottie.dart';
+import 'package:nfc_manager/ndef_record.dart';
 import 'package:nfc_manager/nfc_manager.dart';
+import 'package:nfc_manager_ndef/nfc_manager_ndef.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -191,8 +193,8 @@ class _HomeScreenState extends State<HomeScreen> {
     bloc.add(const HomeEvent.changeNFCReadingStatus(isNFCReading: true));
 
     await NfcManager.instance.startSession(
-      onError: (error) async {
-        NfcManager.instance.stopSession();
+      onSessionErrorIos: (error) async {
+        await NfcManager.instance.stopSession();
         bloc.add(const HomeEvent.changeNFCReadingStatus(isNFCReading: false));
       },
       onDiscovered: (NfcTag tag) async {
@@ -226,6 +228,7 @@ class _HomeScreenState extends State<HomeScreen> {
         await NfcManager.instance.stopSession();
         bloc.add(const HomeEvent.changeNFCReadingStatus(isNFCReading: false));
       },
+      pollingOptions: {NfcPollingOption.iso14443, NfcPollingOption.iso15693},
     );
   }
 }

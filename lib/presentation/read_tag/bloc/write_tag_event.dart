@@ -1,7 +1,7 @@
 part of 'write_tag_bloc.dart';
 
 @freezed
-class WriteTagEvent with _$WriteTagEvent {
+sealed class WriteTagEvent with _$WriteTagEvent {
   const factory WriteTagEvent.initialState() = _InitialState;
 
   const factory WriteTagEvent.changeDataValue({required String value}) = _ChangeDataValue;

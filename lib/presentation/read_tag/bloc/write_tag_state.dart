@@ -1,7 +1,7 @@
 part of 'write_tag_bloc.dart';
 
 @freezed
-class WriteTagState with _$WriteTagState {
+sealed class WriteTagState with _$WriteTagState {
   const factory WriteTagState({
     required String dataValue,
     required String dataType,

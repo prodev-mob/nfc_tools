@@ -15,17 +15,18 @@ This Flutter project provides a set of NFC tools for interacting with NFC tags a
   cupertino_icons: ^1.0.6
   flutter_screenutil: ^5.9.0
   json_annotation: ^4.8.1
-  freezed: ^2.4.5
-  freezed_annotation: ^2.4.1
-  flutter_bloc: ^8.1.3
-  nfc_manager: ^3.3.0
-  fluttertoast: ^8.2.5
+  freezed: ^3.2.4
+  freezed_annotation: ^3.1.0
+  flutter_bloc: ^9.1.1
+  nfc_manager: ^4.1.1
+  nfc_manager_ndef: ^1.1.0
+  fluttertoast: ^9.0.0
   url_launcher: ^6.2.6
   lottie: ^3.1.0
 
   dev_dependencies:
-  flutter_lints: ^3.0.0
-  build_runner: ^2.4.7
+  flutter_lints: ^6.0.0
+  build_runner: ^2.10.5
   ```
 - Add this permission in AndroidManifest.xml file
   ```
@@ -38,46 +39,88 @@ This Flutter project provides a set of NFC tools for interacting with NFC tags a
 	 <string>This app need to NFC scan permission for scan NFC Tag.</string>
   ```
 ### 2. Code SetUp
- - Nfc ReadTag:
-   ```
-    void _tagRead() {
-    NfcManager.instance.startSession(onDiscovered: (NfcTag tag) async {
-     print('${tag.data}');
-      NfcManager.instance.stopSession();
-    });
-    }
-   ```
- - Nfc WriteTag:
-   ```
-   void _ndefWrite() {
-    NfcManager.instance.startSession(onDiscovered: (NfcTag tag) async {
-      var ndef = Ndef.from(tag);
-      if (ndef == null || !ndef.isWritable) {
-        result.value = 'Tag is not ndef writable';
-        NfcManager.instance.stopSession(errorMessage: result.value);
-        return;
-      }
+- Nfc ReadTag:
+  ```
+   Future<void> readNfcTag() async {
+     await NfcManager.instance.startSession(
+     pollingOptions: {
+     NfcPollingOption.iso14443,
+     NfcPollingOption.iso15693,
+     },
+     onSessionErrorIos: (error) async {
+     await NfcManager.instance.stopSession();
+     },
+     onDiscovered: (NfcTag tag) async {
+     final ndef = Ndef.from(tag);
+     String payload = '';
 
-      NdefMessage message = NdefMessage([
-        NdefRecord.createText('Hello World!'),
-        NdefRecord.createUri(Uri.parse('https://flutter.dev')),
-        NdefRecord.createMime(
-            'text/plain', Uint8List.fromList('Hello'.codeUnits)),
-        NdefRecord.createExternal(
-            'com.example', 'mytype', Uint8List.fromList('mydata'.codeUnits)),
-      ]);
+     if (ndef?.cachedMessage != null) {
+       final NdefMessage message = ndef!.cachedMessage!;
+       if (message.records.isNotEmpty) {
+         final NdefRecord record = message.records.first;
 
-      try {
-        await ndef.write(message);
-        result.value = 'Success to "Ndef Write"';
-        NfcManager.instance.stopSession();
-      } catch (e) {
-        result.value = e;
-        NfcManager.instance.stopSession(errorMessage: result.value.toString());
-        return;
-      }
-    });
-  }
+         // Decode payload (Text record)
+         final String decoded = utf8.decode(record.payload.toList());
+
+         // Remove language code prefix
+         payload = decoded.substring(1);
+       }
+     }
+
+     if (payload.isNotEmpty) {
+       debugPrint('NFC Payload: $payload');
+     } else {
+       debugPrint('No NDEF payload found');
+     }
+
+     await NfcManager.instance.stopSession();
+     },
+    );
+   }
+
+   ```
+- Nfc WriteTag:
+  ```
+   Future<void> writeNfcTag({
+     required String value,
+     required bool isLink,
+     }) async {
+     await NfcManager.instance.startSession(
+       pollingOptions: {
+         NfcPollingOption.iso14443,
+         NfcPollingOption.iso15693,
+       },
+       onSessionErrorIos: (error) async {
+         await NfcManager.instance.stopSession();
+       },
+       onDiscovered: (NfcTag tag) async {
+         final ndef = Ndef.from(tag);
+
+         if (ndef == null || !ndef.isWritable) {
+           await NfcManager.instance.stopSession();
+           throw Exception('Tag is not NDEF writable');
+         }
+
+         final NdefMessage message = NdefMessage(
+           records: [
+             isLink
+                 ? NdefRecord.createUri(Uri.parse(value))
+                 : NdefRecord.createText(value),
+           ],
+         );
+
+        try {
+          await ndef.write(message: message);
+          await NfcManager.instance.stopSession();
+          debugPrint('NDEF write successful');
+        } catch (e) {
+          await NfcManager.instance.stopSession();
+          rethrow;
+        }
+       }, 
+     );
+   }
+
    ```
 
 ## Video

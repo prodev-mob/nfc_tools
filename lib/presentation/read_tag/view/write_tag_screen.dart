@@ -1,3 +1,6 @@
+import 'dart:convert';
+import 'dart:typed_data';
+
 import 'package:demo_nfc/extension/url_helper.dart';
 import 'package:demo_nfc/global_widget/radio_button_component.dart';
 import 'package:demo_nfc/presentation/read_tag/bloc/write_data_status_state.dart';
@@ -9,7 +12,9 @@ import 'package:demo_nfc/utils/app_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nfc_manager/ndef_record.dart';
 import 'package:nfc_manager/nfc_manager.dart';
+import 'package:nfc_manager_ndef/nfc_manager_ndef.dart';
 
 class WriteTagScreen extends StatefulWidget {
   const WriteTagScreen({super.key});
@@ -158,7 +163,7 @@ class _WriteTagScreenState extends State<WriteTagScreen> {
 
   void _nfcTagWrite({required WriteTagState state}) {
     NfcManager.instance.startSession(
-      onError: (error) async {
+      onSessionErrorIos: (error) async {
         await NfcManager.instance.stopSession();
         bloc.add(const WriteTagEvent.changeWriteDataStatus(
             writeDataStatus: WriteDataStatus.failed));
@@ -172,14 +177,14 @@ class _WriteTagScreenState extends State<WriteTagScreen> {
           return;
         }
 
-        NdefMessage message = NdefMessage([
+        NdefMessage message = NdefMessage(records: [
           state.dataType == AppConst.link
-              ? NdefRecord.createUri(Uri.parse(state.dataValue.toValidUrl()))
-              : NdefRecord.createText(state.dataValue),
+              ? _uriRecord(state.dataValue.toValidUrl())
+              : _textRecord(state.dataValue),
         ]);
 
         try {
-          await ndef.write(message);
+          await ndef.write(message: message);
           bloc.add(const WriteTagEvent.changeWriteDataStatus(
               writeDataStatus: WriteDataStatus.success));
           NfcManager.instance.stopSession();
@@ -189,8 +194,37 @@ class _WriteTagScreenState extends State<WriteTagScreen> {
               writeDataStatus: WriteDataStatus.failed));
         }
       },
+      pollingOptions: {NfcPollingOption.iso14443, NfcPollingOption.iso15693}
     );
   }
+
+  NdefRecord _uriRecord(String uri) {
+    final uriBytes = utf8.encode(uri);
+
+    return NdefRecord(
+      typeNameFormat: TypeNameFormat.wellKnown,
+      type: Uint8List.fromList(utf8.encode('U')),
+      identifier: Uint8List(0),
+      payload: Uint8List.fromList([0x00, ...uriBytes]), // 0x00 = no URI prefix
+    );
+  }
+
+  NdefRecord _textRecord(String text) {
+    final textBytes = utf8.encode(text);
+    final languageCode = utf8.encode('en');
+
+    return NdefRecord(
+      typeNameFormat: TypeNameFormat.wellKnown,
+      type: Uint8List.fromList(utf8.encode('T')),
+      identifier: Uint8List(0),
+      payload: Uint8List.fromList([
+        languageCode.length,
+        ...languageCode,
+        ...textBytes,
+      ]),
+    );
+  }
+
 
   @override
   void dispose() {

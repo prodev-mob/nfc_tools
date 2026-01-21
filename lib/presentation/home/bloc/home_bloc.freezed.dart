@@ -1,5 +1,5 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,684 +9,629 @@ part of 'home_bloc.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
 /// @nodoc
 mixin _$HomeEvent {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(bool isNFCReading) changeNFCReadingStatus,
-    required TResult Function(String tagData, bool? canShowToast)
-        storeNFCTagData,
-    required TResult Function(bool isTagEmpty) canShowEmptyTagMessage,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(bool isNFCReading)? changeNFCReadingStatus,
-    TResult? Function(String tagData, bool? canShowToast)? storeNFCTagData,
-    TResult? Function(bool isTagEmpty)? canShowEmptyTagMessage,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(bool isNFCReading)? changeNFCReadingStatus,
-    TResult Function(String tagData, bool? canShowToast)? storeNFCTagData,
-    TResult Function(bool isTagEmpty)? canShowEmptyTagMessage,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_ChangeNFCReadingStatus value)
-        changeNFCReadingStatus,
-    required TResult Function(_StoreNFCTagData value) storeNFCTagData,
-    required TResult Function(_CanShowEmptyTagMessage value)
-        canShowEmptyTagMessage,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_ChangeNFCReadingStatus value)? changeNFCReadingStatus,
-    TResult? Function(_StoreNFCTagData value)? storeNFCTagData,
-    TResult? Function(_CanShowEmptyTagMessage value)? canShowEmptyTagMessage,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_ChangeNFCReadingStatus value)? changeNFCReadingStatus,
-    TResult Function(_StoreNFCTagData value)? storeNFCTagData,
-    TResult Function(_CanShowEmptyTagMessage value)? canShowEmptyTagMessage,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+
+
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is HomeEvent);
+}
+
+
+@override
+int get hashCode => runtimeType.hashCode;
+
+@override
+String toString() {
+  return 'HomeEvent()';
+}
+
+
 }
 
 /// @nodoc
-abstract class $HomeEventCopyWith<$Res> {
-  factory $HomeEventCopyWith(HomeEvent value, $Res Function(HomeEvent) then) =
-      _$HomeEventCopyWithImpl<$Res, HomeEvent>;
+class $HomeEventCopyWith<$Res>  {
+$HomeEventCopyWith(HomeEvent _, $Res Function(HomeEvent) __);
 }
 
-/// @nodoc
-class _$HomeEventCopyWithImpl<$Res, $Val extends HomeEvent>
-    implements $HomeEventCopyWith<$Res> {
-  _$HomeEventCopyWithImpl(this._value, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+/// Adds pattern-matching-related methods to [HomeEvent].
+extension HomeEventPatterns on HomeEvent {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( _ChangeNFCReadingStatus value)?  changeNFCReadingStatus,TResult Function( _StoreNFCTagData value)?  storeNFCTagData,TResult Function( _CanShowEmptyTagMessage value)?  canShowEmptyTagMessage,required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _ChangeNFCReadingStatus() when changeNFCReadingStatus != null:
+return changeNFCReadingStatus(_that);case _StoreNFCTagData() when storeNFCTagData != null:
+return storeNFCTagData(_that);case _CanShowEmptyTagMessage() when canShowEmptyTagMessage != null:
+return canShowEmptyTagMessage(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( _ChangeNFCReadingStatus value)  changeNFCReadingStatus,required TResult Function( _StoreNFCTagData value)  storeNFCTagData,required TResult Function( _CanShowEmptyTagMessage value)  canShowEmptyTagMessage,}){
+final _that = this;
+switch (_that) {
+case _ChangeNFCReadingStatus():
+return changeNFCReadingStatus(_that);case _StoreNFCTagData():
+return storeNFCTagData(_that);case _CanShowEmptyTagMessage():
+return canShowEmptyTagMessage(_that);}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( _ChangeNFCReadingStatus value)?  changeNFCReadingStatus,TResult? Function( _StoreNFCTagData value)?  storeNFCTagData,TResult? Function( _CanShowEmptyTagMessage value)?  canShowEmptyTagMessage,}){
+final _that = this;
+switch (_that) {
+case _ChangeNFCReadingStatus() when changeNFCReadingStatus != null:
+return changeNFCReadingStatus(_that);case _StoreNFCTagData() when storeNFCTagData != null:
+return storeNFCTagData(_that);case _CanShowEmptyTagMessage() when canShowEmptyTagMessage != null:
+return canShowEmptyTagMessage(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( bool isNFCReading)?  changeNFCReadingStatus,TResult Function( String tagData,  bool? canShowToast)?  storeNFCTagData,TResult Function( bool isTagEmpty)?  canShowEmptyTagMessage,required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _ChangeNFCReadingStatus() when changeNFCReadingStatus != null:
+return changeNFCReadingStatus(_that.isNFCReading);case _StoreNFCTagData() when storeNFCTagData != null:
+return storeNFCTagData(_that.tagData,_that.canShowToast);case _CanShowEmptyTagMessage() when canShowEmptyTagMessage != null:
+return canShowEmptyTagMessage(_that.isTagEmpty);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( bool isNFCReading)  changeNFCReadingStatus,required TResult Function( String tagData,  bool? canShowToast)  storeNFCTagData,required TResult Function( bool isTagEmpty)  canShowEmptyTagMessage,}) {final _that = this;
+switch (_that) {
+case _ChangeNFCReadingStatus():
+return changeNFCReadingStatus(_that.isNFCReading);case _StoreNFCTagData():
+return storeNFCTagData(_that.tagData,_that.canShowToast);case _CanShowEmptyTagMessage():
+return canShowEmptyTagMessage(_that.isTagEmpty);}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( bool isNFCReading)?  changeNFCReadingStatus,TResult? Function( String tagData,  bool? canShowToast)?  storeNFCTagData,TResult? Function( bool isTagEmpty)?  canShowEmptyTagMessage,}) {final _that = this;
+switch (_that) {
+case _ChangeNFCReadingStatus() when changeNFCReadingStatus != null:
+return changeNFCReadingStatus(_that.isNFCReading);case _StoreNFCTagData() when storeNFCTagData != null:
+return storeNFCTagData(_that.tagData,_that.canShowToast);case _CanShowEmptyTagMessage() when canShowEmptyTagMessage != null:
+return canShowEmptyTagMessage(_that.isTagEmpty);case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-abstract class _$$ChangeNFCReadingStatusImplCopyWith<$Res> {
-  factory _$$ChangeNFCReadingStatusImplCopyWith(
-          _$ChangeNFCReadingStatusImpl value,
-          $Res Function(_$ChangeNFCReadingStatusImpl) then) =
-      __$$ChangeNFCReadingStatusImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({bool isNFCReading});
-}
-
-/// @nodoc
-class __$$ChangeNFCReadingStatusImplCopyWithImpl<$Res>
-    extends _$HomeEventCopyWithImpl<$Res, _$ChangeNFCReadingStatusImpl>
-    implements _$$ChangeNFCReadingStatusImplCopyWith<$Res> {
-  __$$ChangeNFCReadingStatusImplCopyWithImpl(
-      _$ChangeNFCReadingStatusImpl _value,
-      $Res Function(_$ChangeNFCReadingStatusImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? isNFCReading = null,
-  }) {
-    return _then(_$ChangeNFCReadingStatusImpl(
-      isNFCReading: null == isNFCReading
-          ? _value.isNFCReading
-          : isNFCReading // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$ChangeNFCReadingStatusImpl implements _ChangeNFCReadingStatus {
-  const _$ChangeNFCReadingStatusImpl({required this.isNFCReading});
-
-  @override
-  final bool isNFCReading;
-
-  @override
-  String toString() {
-    return 'HomeEvent.changeNFCReadingStatus(isNFCReading: $isNFCReading)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ChangeNFCReadingStatusImpl &&
-            (identical(other.isNFCReading, isNFCReading) ||
-                other.isNFCReading == isNFCReading));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, isNFCReading);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ChangeNFCReadingStatusImplCopyWith<_$ChangeNFCReadingStatusImpl>
-      get copyWith => __$$ChangeNFCReadingStatusImplCopyWithImpl<
-          _$ChangeNFCReadingStatusImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(bool isNFCReading) changeNFCReadingStatus,
-    required TResult Function(String tagData, bool? canShowToast)
-        storeNFCTagData,
-    required TResult Function(bool isTagEmpty) canShowEmptyTagMessage,
-  }) {
-    return changeNFCReadingStatus(isNFCReading);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(bool isNFCReading)? changeNFCReadingStatus,
-    TResult? Function(String tagData, bool? canShowToast)? storeNFCTagData,
-    TResult? Function(bool isTagEmpty)? canShowEmptyTagMessage,
-  }) {
-    return changeNFCReadingStatus?.call(isNFCReading);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(bool isNFCReading)? changeNFCReadingStatus,
-    TResult Function(String tagData, bool? canShowToast)? storeNFCTagData,
-    TResult Function(bool isTagEmpty)? canShowEmptyTagMessage,
-    required TResult orElse(),
-  }) {
-    if (changeNFCReadingStatus != null) {
-      return changeNFCReadingStatus(isNFCReading);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_ChangeNFCReadingStatus value)
-        changeNFCReadingStatus,
-    required TResult Function(_StoreNFCTagData value) storeNFCTagData,
-    required TResult Function(_CanShowEmptyTagMessage value)
-        canShowEmptyTagMessage,
-  }) {
-    return changeNFCReadingStatus(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_ChangeNFCReadingStatus value)? changeNFCReadingStatus,
-    TResult? Function(_StoreNFCTagData value)? storeNFCTagData,
-    TResult? Function(_CanShowEmptyTagMessage value)? canShowEmptyTagMessage,
-  }) {
-    return changeNFCReadingStatus?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_ChangeNFCReadingStatus value)? changeNFCReadingStatus,
-    TResult Function(_StoreNFCTagData value)? storeNFCTagData,
-    TResult Function(_CanShowEmptyTagMessage value)? canShowEmptyTagMessage,
-    required TResult orElse(),
-  }) {
-    if (changeNFCReadingStatus != null) {
-      return changeNFCReadingStatus(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _ChangeNFCReadingStatus implements HomeEvent {
-  const factory _ChangeNFCReadingStatus({required final bool isNFCReading}) =
-      _$ChangeNFCReadingStatusImpl;
-
-  bool get isNFCReading;
-  @JsonKey(ignore: true)
-  _$$ChangeNFCReadingStatusImplCopyWith<_$ChangeNFCReadingStatusImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$StoreNFCTagDataImplCopyWith<$Res> {
-  factory _$$StoreNFCTagDataImplCopyWith(_$StoreNFCTagDataImpl value,
-          $Res Function(_$StoreNFCTagDataImpl) then) =
-      __$$StoreNFCTagDataImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String tagData, bool? canShowToast});
-}
-
-/// @nodoc
-class __$$StoreNFCTagDataImplCopyWithImpl<$Res>
-    extends _$HomeEventCopyWithImpl<$Res, _$StoreNFCTagDataImpl>
-    implements _$$StoreNFCTagDataImplCopyWith<$Res> {
-  __$$StoreNFCTagDataImplCopyWithImpl(
-      _$StoreNFCTagDataImpl _value, $Res Function(_$StoreNFCTagDataImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? tagData = null,
-    Object? canShowToast = freezed,
-  }) {
-    return _then(_$StoreNFCTagDataImpl(
-      tagData: null == tagData
-          ? _value.tagData
-          : tagData // ignore: cast_nullable_to_non_nullable
-              as String,
-      canShowToast: freezed == canShowToast
-          ? _value.canShowToast
-          : canShowToast // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
-  }
 }
 
 /// @nodoc
 
-class _$StoreNFCTagDataImpl implements _StoreNFCTagData {
-  const _$StoreNFCTagDataImpl({required this.tagData, this.canShowToast});
 
-  @override
-  final String tagData;
-  @override
-  final bool? canShowToast;
+class _ChangeNFCReadingStatus implements HomeEvent {
+  const _ChangeNFCReadingStatus({required this.isNFCReading});
+  
 
-  @override
-  String toString() {
-    return 'HomeEvent.storeNFCTagData(tagData: $tagData, canShowToast: $canShowToast)';
-  }
+ final  bool isNFCReading;
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$StoreNFCTagDataImpl &&
-            (identical(other.tagData, tagData) || other.tagData == tagData) &&
-            (identical(other.canShowToast, canShowToast) ||
-                other.canShowToast == canShowToast));
-  }
+/// Create a copy of HomeEvent
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$ChangeNFCReadingStatusCopyWith<_ChangeNFCReadingStatus> get copyWith => __$ChangeNFCReadingStatusCopyWithImpl<_ChangeNFCReadingStatus>(this, _$identity);
 
-  @override
-  int get hashCode => Object.hash(runtimeType, tagData, canShowToast);
 
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$StoreNFCTagDataImplCopyWith<_$StoreNFCTagDataImpl> get copyWith =>
-      __$$StoreNFCTagDataImplCopyWithImpl<_$StoreNFCTagDataImpl>(
-          this, _$identity);
 
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(bool isNFCReading) changeNFCReadingStatus,
-    required TResult Function(String tagData, bool? canShowToast)
-        storeNFCTagData,
-    required TResult Function(bool isTagEmpty) canShowEmptyTagMessage,
-  }) {
-    return storeNFCTagData(tagData, canShowToast);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(bool isNFCReading)? changeNFCReadingStatus,
-    TResult? Function(String tagData, bool? canShowToast)? storeNFCTagData,
-    TResult? Function(bool isTagEmpty)? canShowEmptyTagMessage,
-  }) {
-    return storeNFCTagData?.call(tagData, canShowToast);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(bool isNFCReading)? changeNFCReadingStatus,
-    TResult Function(String tagData, bool? canShowToast)? storeNFCTagData,
-    TResult Function(bool isTagEmpty)? canShowEmptyTagMessage,
-    required TResult orElse(),
-  }) {
-    if (storeNFCTagData != null) {
-      return storeNFCTagData(tagData, canShowToast);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_ChangeNFCReadingStatus value)
-        changeNFCReadingStatus,
-    required TResult Function(_StoreNFCTagData value) storeNFCTagData,
-    required TResult Function(_CanShowEmptyTagMessage value)
-        canShowEmptyTagMessage,
-  }) {
-    return storeNFCTagData(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_ChangeNFCReadingStatus value)? changeNFCReadingStatus,
-    TResult? Function(_StoreNFCTagData value)? storeNFCTagData,
-    TResult? Function(_CanShowEmptyTagMessage value)? canShowEmptyTagMessage,
-  }) {
-    return storeNFCTagData?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_ChangeNFCReadingStatus value)? changeNFCReadingStatus,
-    TResult Function(_StoreNFCTagData value)? storeNFCTagData,
-    TResult Function(_CanShowEmptyTagMessage value)? canShowEmptyTagMessage,
-    required TResult orElse(),
-  }) {
-    if (storeNFCTagData != null) {
-      return storeNFCTagData(this);
-    }
-    return orElse();
-  }
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _ChangeNFCReadingStatus&&(identical(other.isNFCReading, isNFCReading) || other.isNFCReading == isNFCReading));
 }
 
-abstract class _StoreNFCTagData implements HomeEvent {
-  const factory _StoreNFCTagData(
-      {required final String tagData,
-      final bool? canShowToast}) = _$StoreNFCTagDataImpl;
 
-  String get tagData;
-  bool? get canShowToast;
-  @JsonKey(ignore: true)
-  _$$StoreNFCTagDataImplCopyWith<_$StoreNFCTagDataImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+int get hashCode => Object.hash(runtimeType,isNFCReading);
+
+@override
+String toString() {
+  return 'HomeEvent.changeNFCReadingStatus(isNFCReading: $isNFCReading)';
+}
+
+
 }
 
 /// @nodoc
-abstract class _$$CanShowEmptyTagMessageImplCopyWith<$Res> {
-  factory _$$CanShowEmptyTagMessageImplCopyWith(
-          _$CanShowEmptyTagMessageImpl value,
-          $Res Function(_$CanShowEmptyTagMessageImpl) then) =
-      __$$CanShowEmptyTagMessageImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({bool isTagEmpty});
+abstract mixin class _$ChangeNFCReadingStatusCopyWith<$Res> implements $HomeEventCopyWith<$Res> {
+  factory _$ChangeNFCReadingStatusCopyWith(_ChangeNFCReadingStatus value, $Res Function(_ChangeNFCReadingStatus) _then) = __$ChangeNFCReadingStatusCopyWithImpl;
+@useResult
+$Res call({
+ bool isNFCReading
+});
+
+
+
+
+}
+/// @nodoc
+class __$ChangeNFCReadingStatusCopyWithImpl<$Res>
+    implements _$ChangeNFCReadingStatusCopyWith<$Res> {
+  __$ChangeNFCReadingStatusCopyWithImpl(this._self, this._then);
+
+  final _ChangeNFCReadingStatus _self;
+  final $Res Function(_ChangeNFCReadingStatus) _then;
+
+/// Create a copy of HomeEvent
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? isNFCReading = null,}) {
+  return _then(_ChangeNFCReadingStatus(
+isNFCReading: null == isNFCReading ? _self.isNFCReading : isNFCReading // ignore: cast_nullable_to_non_nullable
+as bool,
+  ));
 }
 
-/// @nodoc
-class __$$CanShowEmptyTagMessageImplCopyWithImpl<$Res>
-    extends _$HomeEventCopyWithImpl<$Res, _$CanShowEmptyTagMessageImpl>
-    implements _$$CanShowEmptyTagMessageImplCopyWith<$Res> {
-  __$$CanShowEmptyTagMessageImplCopyWithImpl(
-      _$CanShowEmptyTagMessageImpl _value,
-      $Res Function(_$CanShowEmptyTagMessageImpl) _then)
-      : super(_value, _then);
 
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? isTagEmpty = null,
-  }) {
-    return _then(_$CanShowEmptyTagMessageImpl(
-      isTagEmpty: null == isTagEmpty
-          ? _value.isTagEmpty
-          : isTagEmpty // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
-  }
 }
 
 /// @nodoc
 
-class _$CanShowEmptyTagMessageImpl implements _CanShowEmptyTagMessage {
-  const _$CanShowEmptyTagMessageImpl({required this.isTagEmpty});
 
-  @override
-  final bool isTagEmpty;
+class _StoreNFCTagData implements HomeEvent {
+  const _StoreNFCTagData({required this.tagData, this.canShowToast});
+  
 
-  @override
-  String toString() {
-    return 'HomeEvent.canShowEmptyTagMessage(isTagEmpty: $isTagEmpty)';
-  }
+ final  String tagData;
+ final  bool? canShowToast;
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CanShowEmptyTagMessageImpl &&
-            (identical(other.isTagEmpty, isTagEmpty) ||
-                other.isTagEmpty == isTagEmpty));
-  }
+/// Create a copy of HomeEvent
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$StoreNFCTagDataCopyWith<_StoreNFCTagData> get copyWith => __$StoreNFCTagDataCopyWithImpl<_StoreNFCTagData>(this, _$identity);
 
-  @override
-  int get hashCode => Object.hash(runtimeType, isTagEmpty);
 
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$CanShowEmptyTagMessageImplCopyWith<_$CanShowEmptyTagMessageImpl>
-      get copyWith => __$$CanShowEmptyTagMessageImplCopyWithImpl<
-          _$CanShowEmptyTagMessageImpl>(this, _$identity);
 
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(bool isNFCReading) changeNFCReadingStatus,
-    required TResult Function(String tagData, bool? canShowToast)
-        storeNFCTagData,
-    required TResult Function(bool isTagEmpty) canShowEmptyTagMessage,
-  }) {
-    return canShowEmptyTagMessage(isTagEmpty);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(bool isNFCReading)? changeNFCReadingStatus,
-    TResult? Function(String tagData, bool? canShowToast)? storeNFCTagData,
-    TResult? Function(bool isTagEmpty)? canShowEmptyTagMessage,
-  }) {
-    return canShowEmptyTagMessage?.call(isTagEmpty);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(bool isNFCReading)? changeNFCReadingStatus,
-    TResult Function(String tagData, bool? canShowToast)? storeNFCTagData,
-    TResult Function(bool isTagEmpty)? canShowEmptyTagMessage,
-    required TResult orElse(),
-  }) {
-    if (canShowEmptyTagMessage != null) {
-      return canShowEmptyTagMessage(isTagEmpty);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_ChangeNFCReadingStatus value)
-        changeNFCReadingStatus,
-    required TResult Function(_StoreNFCTagData value) storeNFCTagData,
-    required TResult Function(_CanShowEmptyTagMessage value)
-        canShowEmptyTagMessage,
-  }) {
-    return canShowEmptyTagMessage(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_ChangeNFCReadingStatus value)? changeNFCReadingStatus,
-    TResult? Function(_StoreNFCTagData value)? storeNFCTagData,
-    TResult? Function(_CanShowEmptyTagMessage value)? canShowEmptyTagMessage,
-  }) {
-    return canShowEmptyTagMessage?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_ChangeNFCReadingStatus value)? changeNFCReadingStatus,
-    TResult Function(_StoreNFCTagData value)? storeNFCTagData,
-    TResult Function(_CanShowEmptyTagMessage value)? canShowEmptyTagMessage,
-    required TResult orElse(),
-  }) {
-    if (canShowEmptyTagMessage != null) {
-      return canShowEmptyTagMessage(this);
-    }
-    return orElse();
-  }
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _StoreNFCTagData&&(identical(other.tagData, tagData) || other.tagData == tagData)&&(identical(other.canShowToast, canShowToast) || other.canShowToast == canShowToast));
 }
 
-abstract class _CanShowEmptyTagMessage implements HomeEvent {
-  const factory _CanShowEmptyTagMessage({required final bool isTagEmpty}) =
-      _$CanShowEmptyTagMessageImpl;
 
-  bool get isTagEmpty;
-  @JsonKey(ignore: true)
-  _$$CanShowEmptyTagMessageImplCopyWith<_$CanShowEmptyTagMessageImpl>
-      get copyWith => throw _privateConstructorUsedError;
+@override
+int get hashCode => Object.hash(runtimeType,tagData,canShowToast);
+
+@override
+String toString() {
+  return 'HomeEvent.storeNFCTagData(tagData: $tagData, canShowToast: $canShowToast)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$StoreNFCTagDataCopyWith<$Res> implements $HomeEventCopyWith<$Res> {
+  factory _$StoreNFCTagDataCopyWith(_StoreNFCTagData value, $Res Function(_StoreNFCTagData) _then) = __$StoreNFCTagDataCopyWithImpl;
+@useResult
+$Res call({
+ String tagData, bool? canShowToast
+});
+
+
+
+
+}
+/// @nodoc
+class __$StoreNFCTagDataCopyWithImpl<$Res>
+    implements _$StoreNFCTagDataCopyWith<$Res> {
+  __$StoreNFCTagDataCopyWithImpl(this._self, this._then);
+
+  final _StoreNFCTagData _self;
+  final $Res Function(_StoreNFCTagData) _then;
+
+/// Create a copy of HomeEvent
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? tagData = null,Object? canShowToast = freezed,}) {
+  return _then(_StoreNFCTagData(
+tagData: null == tagData ? _self.tagData : tagData // ignore: cast_nullable_to_non_nullable
+as String,canShowToast: freezed == canShowToast ? _self.canShowToast : canShowToast // ignore: cast_nullable_to_non_nullable
+as bool?,
+  ));
+}
+
+
+}
+
+/// @nodoc
+
+
+class _CanShowEmptyTagMessage implements HomeEvent {
+  const _CanShowEmptyTagMessage({required this.isTagEmpty});
+  
+
+ final  bool isTagEmpty;
+
+/// Create a copy of HomeEvent
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$CanShowEmptyTagMessageCopyWith<_CanShowEmptyTagMessage> get copyWith => __$CanShowEmptyTagMessageCopyWithImpl<_CanShowEmptyTagMessage>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _CanShowEmptyTagMessage&&(identical(other.isTagEmpty, isTagEmpty) || other.isTagEmpty == isTagEmpty));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,isTagEmpty);
+
+@override
+String toString() {
+  return 'HomeEvent.canShowEmptyTagMessage(isTagEmpty: $isTagEmpty)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$CanShowEmptyTagMessageCopyWith<$Res> implements $HomeEventCopyWith<$Res> {
+  factory _$CanShowEmptyTagMessageCopyWith(_CanShowEmptyTagMessage value, $Res Function(_CanShowEmptyTagMessage) _then) = __$CanShowEmptyTagMessageCopyWithImpl;
+@useResult
+$Res call({
+ bool isTagEmpty
+});
+
+
+
+
+}
+/// @nodoc
+class __$CanShowEmptyTagMessageCopyWithImpl<$Res>
+    implements _$CanShowEmptyTagMessageCopyWith<$Res> {
+  __$CanShowEmptyTagMessageCopyWithImpl(this._self, this._then);
+
+  final _CanShowEmptyTagMessage _self;
+  final $Res Function(_CanShowEmptyTagMessage) _then;
+
+/// Create a copy of HomeEvent
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? isTagEmpty = null,}) {
+  return _then(_CanShowEmptyTagMessage(
+isTagEmpty: null == isTagEmpty ? _self.isTagEmpty : isTagEmpty // ignore: cast_nullable_to_non_nullable
+as bool,
+  ));
+}
+
+
 }
 
 /// @nodoc
 mixin _$HomeState {
-  bool get isNFCReading => throw _privateConstructorUsedError;
-  bool get canShowTagEmptyMessage => throw _privateConstructorUsedError;
-  String get storedDataInTag => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
-  $HomeStateCopyWith<HomeState> get copyWith =>
-      throw _privateConstructorUsedError;
+ bool get isNFCReading; bool get canShowTagEmptyMessage; String get storedDataInTag;
+/// Create a copy of HomeState
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$HomeStateCopyWith<HomeState> get copyWith => _$HomeStateCopyWithImpl<HomeState>(this as HomeState, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is HomeState&&(identical(other.isNFCReading, isNFCReading) || other.isNFCReading == isNFCReading)&&(identical(other.canShowTagEmptyMessage, canShowTagEmptyMessage) || other.canShowTagEmptyMessage == canShowTagEmptyMessage)&&(identical(other.storedDataInTag, storedDataInTag) || other.storedDataInTag == storedDataInTag));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,isNFCReading,canShowTagEmptyMessage,storedDataInTag);
+
+@override
+String toString() {
+  return 'HomeState(isNFCReading: $isNFCReading, canShowTagEmptyMessage: $canShowTagEmptyMessage, storedDataInTag: $storedDataInTag)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $HomeStateCopyWith<$Res> {
-  factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) then) =
-      _$HomeStateCopyWithImpl<$Res, HomeState>;
-  @useResult
-  $Res call(
-      {bool isNFCReading, bool canShowTagEmptyMessage, String storedDataInTag});
-}
+abstract mixin class $HomeStateCopyWith<$Res>  {
+  factory $HomeStateCopyWith(HomeState value, $Res Function(HomeState) _then) = _$HomeStateCopyWithImpl;
+@useResult
+$Res call({
+ bool isNFCReading, bool canShowTagEmptyMessage, String storedDataInTag
+});
 
+
+
+
+}
 /// @nodoc
-class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
+class _$HomeStateCopyWithImpl<$Res>
     implements $HomeStateCopyWith<$Res> {
-  _$HomeStateCopyWithImpl(this._value, this._then);
+  _$HomeStateCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final HomeState _self;
+  final $Res Function(HomeState) _then;
 
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? isNFCReading = null,
-    Object? canShowTagEmptyMessage = null,
-    Object? storedDataInTag = null,
-  }) {
-    return _then(_value.copyWith(
-      isNFCReading: null == isNFCReading
-          ? _value.isNFCReading
-          : isNFCReading // ignore: cast_nullable_to_non_nullable
-              as bool,
-      canShowTagEmptyMessage: null == canShowTagEmptyMessage
-          ? _value.canShowTagEmptyMessage
-          : canShowTagEmptyMessage // ignore: cast_nullable_to_non_nullable
-              as bool,
-      storedDataInTag: null == storedDataInTag
-          ? _value.storedDataInTag
-          : storedDataInTag // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
-  }
+/// Create a copy of HomeState
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? isNFCReading = null,Object? canShowTagEmptyMessage = null,Object? storedDataInTag = null,}) {
+  return _then(_self.copyWith(
+isNFCReading: null == isNFCReading ? _self.isNFCReading : isNFCReading // ignore: cast_nullable_to_non_nullable
+as bool,canShowTagEmptyMessage: null == canShowTagEmptyMessage ? _self.canShowTagEmptyMessage : canShowTagEmptyMessage // ignore: cast_nullable_to_non_nullable
+as bool,storedDataInTag: null == storedDataInTag ? _self.storedDataInTag : storedDataInTag // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
+}
+
+}
+
+
+/// Adds pattern-matching-related methods to [HomeState].
+extension HomeStatePatterns on HomeState {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _HomeState value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _HomeState() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _HomeState value)  $default,){
+final _that = this;
+switch (_that) {
+case _HomeState():
+return $default(_that);}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _HomeState value)?  $default,){
+final _that = this;
+switch (_that) {
+case _HomeState() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( bool isNFCReading,  bool canShowTagEmptyMessage,  String storedDataInTag)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _HomeState() when $default != null:
+return $default(_that.isNFCReading,_that.canShowTagEmptyMessage,_that.storedDataInTag);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( bool isNFCReading,  bool canShowTagEmptyMessage,  String storedDataInTag)  $default,) {final _that = this;
+switch (_that) {
+case _HomeState():
+return $default(_that.isNFCReading,_that.canShowTagEmptyMessage,_that.storedDataInTag);}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( bool isNFCReading,  bool canShowTagEmptyMessage,  String storedDataInTag)?  $default,) {final _that = this;
+switch (_that) {
+case _HomeState() when $default != null:
+return $default(_that.isNFCReading,_that.canShowTagEmptyMessage,_that.storedDataInTag);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
-abstract class _$$HomeStateImplCopyWith<$Res>
-    implements $HomeStateCopyWith<$Res> {
-  factory _$$HomeStateImplCopyWith(
-          _$HomeStateImpl value, $Res Function(_$HomeStateImpl) then) =
-      __$$HomeStateImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {bool isNFCReading, bool canShowTagEmptyMessage, String storedDataInTag});
+
+
+class _HomeState implements HomeState {
+  const _HomeState({required this.isNFCReading, required this.canShowTagEmptyMessage, required this.storedDataInTag});
+  
+
+@override final  bool isNFCReading;
+@override final  bool canShowTagEmptyMessage;
+@override final  String storedDataInTag;
+
+/// Create a copy of HomeState
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$HomeStateCopyWith<_HomeState> get copyWith => __$HomeStateCopyWithImpl<_HomeState>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _HomeState&&(identical(other.isNFCReading, isNFCReading) || other.isNFCReading == isNFCReading)&&(identical(other.canShowTagEmptyMessage, canShowTagEmptyMessage) || other.canShowTagEmptyMessage == canShowTagEmptyMessage)&&(identical(other.storedDataInTag, storedDataInTag) || other.storedDataInTag == storedDataInTag));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,isNFCReading,canShowTagEmptyMessage,storedDataInTag);
+
+@override
+String toString() {
+  return 'HomeState(isNFCReading: $isNFCReading, canShowTagEmptyMessage: $canShowTagEmptyMessage, storedDataInTag: $storedDataInTag)';
+}
+
+
 }
 
 /// @nodoc
-class __$$HomeStateImplCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$HomeStateImpl>
-    implements _$$HomeStateImplCopyWith<$Res> {
-  __$$HomeStateImplCopyWithImpl(
-      _$HomeStateImpl _value, $Res Function(_$HomeStateImpl) _then)
-      : super(_value, _then);
+abstract mixin class _$HomeStateCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
+  factory _$HomeStateCopyWith(_HomeState value, $Res Function(_HomeState) _then) = __$HomeStateCopyWithImpl;
+@override @useResult
+$Res call({
+ bool isNFCReading, bool canShowTagEmptyMessage, String storedDataInTag
+});
 
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? isNFCReading = null,
-    Object? canShowTagEmptyMessage = null,
-    Object? storedDataInTag = null,
-  }) {
-    return _then(_$HomeStateImpl(
-      isNFCReading: null == isNFCReading
-          ? _value.isNFCReading
-          : isNFCReading // ignore: cast_nullable_to_non_nullable
-              as bool,
-      canShowTagEmptyMessage: null == canShowTagEmptyMessage
-          ? _value.canShowTagEmptyMessage
-          : canShowTagEmptyMessage // ignore: cast_nullable_to_non_nullable
-              as bool,
-      storedDataInTag: null == storedDataInTag
-          ? _value.storedDataInTag
-          : storedDataInTag // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
+
+
+
 }
-
 /// @nodoc
+class __$HomeStateCopyWithImpl<$Res>
+    implements _$HomeStateCopyWith<$Res> {
+  __$HomeStateCopyWithImpl(this._self, this._then);
 
-class _$HomeStateImpl implements _HomeState {
-  const _$HomeStateImpl(
-      {required this.isNFCReading,
-      required this.canShowTagEmptyMessage,
-      required this.storedDataInTag});
+  final _HomeState _self;
+  final $Res Function(_HomeState) _then;
 
-  @override
-  final bool isNFCReading;
-  @override
-  final bool canShowTagEmptyMessage;
-  @override
-  final String storedDataInTag;
-
-  @override
-  String toString() {
-    return 'HomeState(isNFCReading: $isNFCReading, canShowTagEmptyMessage: $canShowTagEmptyMessage, storedDataInTag: $storedDataInTag)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$HomeStateImpl &&
-            (identical(other.isNFCReading, isNFCReading) ||
-                other.isNFCReading == isNFCReading) &&
-            (identical(other.canShowTagEmptyMessage, canShowTagEmptyMessage) ||
-                other.canShowTagEmptyMessage == canShowTagEmptyMessage) &&
-            (identical(other.storedDataInTag, storedDataInTag) ||
-                other.storedDataInTag == storedDataInTag));
-  }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType, isNFCReading, canShowTagEmptyMessage, storedDataInTag);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$HomeStateImplCopyWith<_$HomeStateImpl> get copyWith =>
-      __$$HomeStateImplCopyWithImpl<_$HomeStateImpl>(this, _$identity);
+/// Create a copy of HomeState
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? isNFCReading = null,Object? canShowTagEmptyMessage = null,Object? storedDataInTag = null,}) {
+  return _then(_HomeState(
+isNFCReading: null == isNFCReading ? _self.isNFCReading : isNFCReading // ignore: cast_nullable_to_non_nullable
+as bool,canShowTagEmptyMessage: null == canShowTagEmptyMessage ? _self.canShowTagEmptyMessage : canShowTagEmptyMessage // ignore: cast_nullable_to_non_nullable
+as bool,storedDataInTag: null == storedDataInTag ? _self.storedDataInTag : storedDataInTag // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-abstract class _HomeState implements HomeState {
-  const factory _HomeState(
-      {required final bool isNFCReading,
-      required final bool canShowTagEmptyMessage,
-      required final String storedDataInTag}) = _$HomeStateImpl;
 
-  @override
-  bool get isNFCReading;
-  @override
-  bool get canShowTagEmptyMessage;
-  @override
-  String get storedDataInTag;
-  @override
-  @JsonKey(ignore: true)
-  _$$HomeStateImplCopyWith<_$HomeStateImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
+
+// dart format on
